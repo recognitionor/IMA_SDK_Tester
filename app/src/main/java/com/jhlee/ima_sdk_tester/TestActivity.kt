@@ -9,8 +9,10 @@ class TestActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        setContentView(R.layout.activity_test)
+        findViewById<Button>(R.id.btn).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
